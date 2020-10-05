@@ -45,5 +45,3 @@ Coins is a app with market information and news about cryptucurrencies use [Coin
     * [Kluent](https://github.com/MarkusAmshove/Kluent)
 * Gradle
     * [Gradle Kotlin DSL](https://docs.gradle.org/current/userguide/kotlin_dsl.html)
-    * Custom tasks
-    * Plugins ([Ktlint](https://github.com/JLLeitschuh/ktlint-gradle), [Detekt](https://github.com/arturbosch/detekt#with-gradle), [Versions](https://github.com/ben-manes/gradle-versions-plugin), [SafeArgs](https://developer.android.com/guide/navigation/navigation-pass-data#Safe-args))
