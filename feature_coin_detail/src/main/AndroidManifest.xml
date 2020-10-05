@@ -1,0 +1,14 @@
+<manifest
+xmlns:dist="http://schemas.android.com/apk/distribution"
+package="com.btavares.feature_coin_detail">
+
+<dist:module
+    dist:instant="true"
+    dist:onDemand="false"
+    dist:title="Coin Detail">
+    <dist:delivery>
+        <dist:install-time />
+    </dist:delivery>
+    <dist:fusing dist:include="false"/>
+</dist:module>
+</manifest>

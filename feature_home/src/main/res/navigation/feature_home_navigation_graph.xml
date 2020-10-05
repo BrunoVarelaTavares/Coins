@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:moduleName="feature_home"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.btavares.feature_home.presentation.home.HomeFragment"
+        android:label="HomeFragment"
+        app:moduleName="feature_home">
+
+        <action
+            android:id="@+id/actionHomeTopNewsListToNewsDetail"
+            app:destination="@id/newsDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action android:id="@+id/actionHomeMoreNewsToNews"
+                app:destination="@+id/newsFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"/>
+
+        <action android:id="@+id/actionHomeToNotificationsFragment"
+                app:destination="@+id/notificationsFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"/>
+
+        <action android:id="@+id/actionHomeToCoinMarketDetailFragment"
+            app:destination="@+id/cryptocurrencyDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+
+        <action android:id="@+id/actionHomeToRegistrationFragment"
+            app:destination="@+id/registrationFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+
+
+
+    </fragment>
+
+
+    <fragment android:id="@+id/registrationFragment"
+        android:name="com.btavares.feature_home.presentation.registration.RegistrationFragment"
+        android:label="RegistrationFragment"
+        app:moduleName="feature_home">
+
+
+        <action android:id="@+id/actionRegistrationFragmentToHomeFragment"
+            app:destination="@+id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+
+    <fragment android:id="@+id/newsDetailFragment"
+              android:name="com.btavares.feature_home.presentation.newsdetail.NewsDetailFragment"
+              android:label="NewsDetailFragment"
+              app:moduleName="feature_home">
+
+              <argument
+                  android:name="url"
+                  app:argType="string"/>
+    </fragment>
+
+    <fragment android:id="@+id/newsFragment"
+              android:name="com.btavares.feature_home.presentation.news.NewsFragment"
+              android:label="NewsFragment"
+              app:moduleName="feature_home">
+        <action
+            android:id="@+id/actionNewsToDetailFragment"
+            app:destination="@id/newsDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/actionNewsGoBackToHomeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+
+    <fragment android:id="@+id/notificationsFragment"
+              android:name="com.btavares.feature_home.presentation.notifications.NotificationsFragment"
+              android:label="NotificationsFragment"
+              app:moduleName="feature_home">
+
+        <action
+            android:id="@+id/actionNotificationsGoBackToHomeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/cryptocurrencyDetailFragment"
+        android:name="com.btavares.feature_coin_detail.presentation.cryptocurrencydetail.CryptocurrencyDetailFragment"
+        android:label="Cryptocurrency Detail"
+        app:moduleName="feature_coin_detail">
+
+        <action
+            android:id="@+id/actionCoinMarketDetailGoBackToHomeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <argument
+            android:name="coinId"
+            app:argType="string"/>
+
+        <argument
+            android:name="coinName"
+            app:argType="string"/>
+
+        <argument
+            android:name="coinCurrentPrice"
+            app:argType="string"/>
+
+        <argument
+            android:name="coinPercentage"
+            app:argType="string"/>
+
+        <argument
+            android:name="nativeCurrencySymbol"
+            app:argType="string"/>
+
+
+    </fragment>
+
+
+
+</navigation>

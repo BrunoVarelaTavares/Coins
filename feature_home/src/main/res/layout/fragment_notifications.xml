@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include android:id="@+id/toolbarNotifications"
+            layout="@layout/snipped_top_notifications_fragment" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottAnim"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:lottie_fileName="under_construction.json"
+            android:layout_below="@id/toolbarNotifications"/>
+
+        <TextView
+            android:id="@+id/myId"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/lottAnim"
+            android:text="@string/under_construction_label"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"/>
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

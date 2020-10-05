@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="price_label">Price</string>
+    <string name="about_label">About</string>
+    <string name="news_label">News</string>
+    <string name="data_not_found_label">Data not found</string>
+    <string name="follow_label">Follow</string>
+    <string name="unfollow_label">Unfollow</string>
+    <string name="all_label">ALL</string>
+    <string name="year_label">YEAR</string>
+    <string name="month_label">MONTH</string>
+    <string name="week_label">WEEK</string>
+    <string name="day_label">DAY</string>
+    <string name="hour_label">HOUR</string>
+</resources>

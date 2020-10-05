@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="portfolio_balance_label">Portfolio Balance</string>
+    <string name="watchlist_label">Watchlist</string>
+    <string name="top_movers_label">Top Movers</string>
+    <string name="top_stories_label">Top Stories</string>
+    <string name="more_stories_label">View more stories</string>
+    <string name="registration_label">Registration</string>
+    <string name="empty_username_error_message">Username can not be empty</string>
+    <string name="empty_email_error_message">Email can not be empty</string>
+    <string name="error_message_insert_new_user">Error inserting user please try again</string>
+    <string name="name_label">Name</string>
+    <string name="email_label">Email</string>
+    <string name="sign_up_label">Sign Up</string>
+    <string name="news_label">News</string>
+</resources>

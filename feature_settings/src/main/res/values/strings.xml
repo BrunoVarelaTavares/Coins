@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cancel">Cancel</string>
+    <string name="native_currency_dialog_title">Native Currencies</string>
+    <string name="label_ok">OK</string>
+</resources>

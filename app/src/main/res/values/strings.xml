@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Coins</string>
+    <string name="home_title">Home</string>
+    <string name="portfolio_title">Portfolio</string>
+    <string name="prices_title">Prices</string>
+    <string name="settings_title">Settings</string>
+
+
+<!--    Dynamic feature titles-->
+    <string name="title_feature_home">feature home</string>
+    <string name="title_feature_portfolio">feature portfolio</string>
+    <string name="title_feature_prices">feature prices</string>
+    <string name="title_feature_settings">feature settings</string>
+    <string name="title_feature_database">feature database</string>
+    <string name="under_construction_label">Under Construction</string>
+    <string name="error_requesting_data_label">Error requesting data</string>
+    <string name="cancel_text_label">Cancel</string>
+    <string name="image_view">Todo</string>
+    <string name="price_label">Price</string>
+    <string name="about_label">About</string>
+    <string name="news_label">News</string>
+</resources>

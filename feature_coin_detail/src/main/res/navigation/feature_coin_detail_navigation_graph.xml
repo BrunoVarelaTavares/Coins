@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/feature_coin_detail_navigation_graph">
+
+
+    <fragment
+        android:id="@+id/cryptocurrencyDetailFragment"
+        android:name="com.btavares.feature_coin_detail.presentation.cryptocurrencydetail.CryptocurrencyDetailFragment"
+        android:label="Cryptocurrency Detail"
+        app:moduleName="feature_coin_detail">
+
+<!--        <action
+            android:id="@+id/actionCryptocurrencyDetailGoBackToPricesFragment"
+            app:popUpTo="@id/pricesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>-->
+
+        <argument
+            android:name="coinId"
+            app:argType="string"/>
+
+        <argument
+            android:name="coinName"
+            app:argType="string"/>
+
+        <argument
+            android:name="coinCurrentPrice"
+            app:argType="string"/>
+
+        <argument
+            android:name="coinPercentage"
+            app:argType="string"/>
+
+        <argument
+            android:name="nativeCurrencySymbol"
+            app:argType="string"/>
+
+    </fragment>
+
+</navigation>

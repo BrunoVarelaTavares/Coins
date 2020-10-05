@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/featureHomeNavigationGraph">
+
+    <include-dynamic
+        android:id="@+id/featureHomeNavigationGraph"
+        app:graphResName="feature_home_navigation_graph"
+        app:moduleName="feature_home"/>
+
+    <include-dynamic
+        android:id="@+id/featurePortfolioNavigationGraph"
+        app:graphResName="feature_portfolio_navigation_graph"
+        app:moduleName="feature_portfolio"/>
+
+    <include-dynamic
+        android:id="@+id/featurePricesNavigationGraph"
+        app:graphResName="feature_prices_navigation_graph"
+        app:moduleName="feature_prices"/>
+
+    <include-dynamic
+        android:id="@+id/featureSettingsNavigationGraph"
+        app:graphResName="feature_settings_navigation_graph"
+        app:moduleName="feature_settings"/>
+
+    <include-dynamic
+        android:id="@+id/featureCoinDetailNavigationGraph"
+        app:graphResName="feature_coin_detail_navigation_graph"
+        app:moduleName="feature_coin_detail"/>
+
+</navigation>
