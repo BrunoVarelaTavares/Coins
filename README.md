@@ -33,7 +33,9 @@ Coins is a app with market information and news about cryptucurrencies use [Coin
         * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - store and manage UI-related data in a lifecycle conscious way
   *   [Coil](https://github.com/coil-kt/coil) - image loading library with Kotlin idiomatic API
   *   [Lottie](http://airbnb.io/lottie) - animation library
-    * [Stetho](http://facebook.github.io/stetho/) - application debugging tool
+  * [Stetho](http://facebook.github.io/stetho/) - application debugging tool
+  * [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart) - chart library 
+  * [Collapsingtoolbarlayout Subtitle](https://github.com/hendraanggrian/collapsingtoolbarlayout-subtitle) 
 * Architecture
     * MVVM + MVI (presentation layer)
     * Clean Architecture (at module level)
