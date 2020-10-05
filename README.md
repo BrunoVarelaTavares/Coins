@@ -4,7 +4,7 @@
 [![AGP](https://img.shields.io/badge/AGP-3.6.3-blue?style=flat)](https://developer.android.com/studio/releases/gradle-plugin)
 [![Gradle](https://img.shields.io/badge/Gradle-5.6.4-blue?style=flat)](https://gradle.org)
 
-Coins is a app with market information and news about cryptucurrencies use [Coingecko](https://kotlinlang.org/) api and [Cryptocontrol](https://cryptocontrol.io/api/v1/).
+Coins is a app with market information and news about cryptucurrencies use [Coingecko](https://www.coingecko.com/en/api) api and [Cryptocontrol](https://api-docs.cryptocontrol.io/).
 
 
 ## Project characteristics
