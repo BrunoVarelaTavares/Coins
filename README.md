@@ -16,7 +16,7 @@ Coins is a app with market information and news about cryptucurrencies use [Coin
 * Testing (Unit)
 * Dependency Injection
 * Material design
-* [Room](https://developer.android.com/topic/libraries/architecture/room?gclid=CjwKCAjwiOv7BRBREiwAXHbv3E5_bHBVq2eIwii6EwVdrxmbxTNtvsefDD6k58birmVMufa9AfcXchoCa7wQAvD_BwE&gclsrc=aw.ds)
+
 
 ## Tech-stack
 
@@ -31,6 +31,7 @@ Coins is a app with market information and news about cryptucurrencies use [Coin
         * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - notify views about database change
         * [Lifecycle](https://developer.android.com/topic/libraries/architecture/lifecycle) - perform an action when lifecycle state changes
         * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - store and manage UI-related data in a lifecycle conscious way
+        * [Room](https://developer.android.com/topic/libraries/architecture/room?gclid=CjwKCAjwiOv7BRBREiwAXHbv3E5_bHBVq2eIwii6EwVdrxmbxTNtvsefDD6k58birmVMufa9AfcXchoCa7wQAvD_BwE&gclsrc=aw.ds) - Create, store, and manage persistent data backed by a SQLite database.
   *   [Coil](https://github.com/coil-kt/coil) - image loading library with Kotlin idiomatic API
   *   [Lottie](http://airbnb.io/lottie) - animation library
   * [Stetho](http://facebook.github.io/stetho/) - application debugging tool
