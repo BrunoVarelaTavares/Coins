@@ -10,7 +10,7 @@ Coins is a app with market information and news about cryptucurrencies use [Coin
 ## Project characteristics
  
 * [Kotlin](https://kotlinlang.org/)
-* Modern architecture (Clean Architecture, Model-View-ViewModel, Dynamic Feature Modules, Model-View-Intent)
+* Modern architecture (Clean Architecture, Model-View-ViewModel, Model-View-Intent, Dynamic Feature Modules)
 * [Android Jetpack](https://developer.android.com/jetpack)
 * A single-activity architecture ([Navigation component](https://developer.android.com/guide/navigation/navigation-getting-started))
 * Testing (Unit)
