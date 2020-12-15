@@ -20,7 +20,7 @@ Coins is a app with market information and news about cryptucurrencies use [Coin
 
 ## Tech-stack
 
-<img src="https://github.com/BrunoVarelaTavares/Coins/blob/main/images/coins_one.gif" width="336" align="right" hspace="20">
+<img src="https://github.com/BrunoVarelaTavares/Coins/blob/main/images/coins_two.gif" width="336" align="right" hspace="20">
 
 * Tech-stack
     * [Kotlin](https://kotlinlang.org/) + [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) - perform background operations
