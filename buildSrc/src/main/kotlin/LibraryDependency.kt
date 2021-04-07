@@ -78,4 +78,5 @@ object LibraryDependency {
     const val MP_ANDROID_CHART = "com.github.PhilJay:MPAndroidChart:${LibraryVersion.MP_A_CHART}"
     const val MT_COLLAPSINGTOOLBAR_SUBTITLE = "com.hendraanggrian.material:collapsingtoolbarlayout-subtitle:${LibraryVersion.MT_CTOOLBAR_SUBTITLE}"
     const val SKYDOVES_EXPANDABLELAYOUT = "com.github.skydoves:expandablelayout:${LibraryVersion.SDS_EXP_LAYOUT}"
+
 }

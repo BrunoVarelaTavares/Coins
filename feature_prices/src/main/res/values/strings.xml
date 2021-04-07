@@ -4,5 +4,7 @@
     <string name="tab_title_all_assets">All assets</string>
     <string name="tab_title_top_gainers">Top gainers</string>
     <string name="tab_title_top_losers">Top losers</string>
+    <string name="iv_coin_logo_description">iv_coin_logo_description</string>
+    <string name="iv_chart_description">iv_chart_description</string>
 
 </resources>

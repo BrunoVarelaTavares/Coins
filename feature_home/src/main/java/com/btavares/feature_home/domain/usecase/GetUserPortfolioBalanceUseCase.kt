@@ -13,7 +13,7 @@ internal class GetUserPortfolioBalanceUseCase(private val homeRepository: HomeRe
     suspend fun execute(
     ): Result = try {
         homeRepository.getUserBalance(
-        )?.let {
+        ).let {
             Result.Success(it)
         }
     }catch (e: IOException){

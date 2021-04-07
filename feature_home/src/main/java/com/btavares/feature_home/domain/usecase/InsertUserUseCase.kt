@@ -17,7 +17,7 @@ internal class InsertUserUseCase(private val homeRepository: HomeRepository) {
         homeRepository.insertUser(
             userName,
             userEmail
-        )?.let {
+        ).let {
             Result.Success(true)
         }
     }catch (e: IOException){

@@ -9,6 +9,43 @@
         android:label="PortfolioFragment"
         app:moduleName="feature_portfolio">
 
+        <action
+            android:id="@+id/actionPortfolioToEditCrypto"
+            app:destination="@id/editCryptoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/editCryptoFragment"
+        android:name="com.btavares.feature_portfolio.presentation.editcryptocurrency.EditCryptocurrencyFragment"
+        android:label="EditCryptocurrencyFragment"
+        app:moduleName="feature_portfolio">
+
+        <action
+            android:id="@+id/actionEditCryptoGoBackToPortfolioFragment"
+            app:popUpTo="@id/portfolioFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <argument
+            android:name="coinId"
+            app:argType="string"/>
+
+        <argument
+            android:name="coinName"
+            app:argType="string"/>
+
+        <argument
+            android:name="portfolioValue"
+            app:argType="string"/>
+
     </fragment>
 
 </navigation>

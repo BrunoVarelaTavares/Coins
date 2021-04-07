@@ -9,5 +9,5 @@ data class UserPortfolio(
         parentColumn = "id",
         entityColumn = "user_id")
 
-    val portfolioBalance: PortfolioBalance
+    val balance: Balance?
 )

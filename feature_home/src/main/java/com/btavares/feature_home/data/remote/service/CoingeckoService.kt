@@ -10,7 +10,7 @@ internal interface CoingeckoService {
     @GET("coins/markets")
     suspend fun  getMarketDataAsync(
         @Query("vs_currency") currency: String?,
-        @Query("ids") ids: String?
+        @Query("ids") ids: String? = ""
     ): List<CryptocurrencyMarketDataModel>
 
 }

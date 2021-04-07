@@ -8,7 +8,9 @@ import com.btavares.feature_database.data.dao.UserDao
 import com.btavares.feature_database.data.entities.*
 
 
-@Database(entities = [User::class, NativeCurrency::class, Cryptocurrency::class, PortfolioBalance::class, PortfolioCurrency::class, UserCryptocurrency::class, UserNativeCurrency::class], version = 1)
+@Database(entities = [User::class, NativeCurrency::class, Cryptocurrency::class, Balance::class,
+                                        Portfolio::class, UserCryptocurrency::class, UserNativeCurrency::class,
+                                                PortfolioCryptocurrency::class, BalancePortfolio::class], version = 1)
 abstract class CoinsDatabase : RoomDatabase() {
     abstract fun userDao() : UserDao
     companion object {

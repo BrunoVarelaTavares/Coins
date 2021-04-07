@@ -1,28 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/lottieAnim"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        app:lottie_fileName="under_construction.json"/>
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
 
-    <TextView
-        android:id="@+id/myId"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/lottieAnim"
-        android:text="@string/under_construction_label"
-        android:textColor="@android:color/black"
-        android:textSize="22sp"/>
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/portfolioCollapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:theme="@style/CustomToolbarTheme"
+            android:fitsSystemWindows="true"
+            app:expandedTitleGravity="bottom|start"
+            app:expandedTitleMarginStart="5dp"
+            app:collapsedTitleGravity="center_horizontal|center_vertical|center"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-</RelativeLayout>
+            <TextView
+                android:id="@+id/someImage"
+                android:text="@string/portfolio_balance_label"
+                android:textColor="@color/light_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="65dp"
+                android:layout_gravity="bottom|start"
+                app:layout_collapseMode="pin"
+                app:layout_collapseParallaxMultiplier="-1"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarPortfolioBalance"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="none"
+                android:layout_marginBottom="10dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:contentInsetStart="0dp"
+                android:contentInsetLeft="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"/>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarPortfolioBalance"
+            style="?android:progressBarStyle" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/portfolioRecyclerView"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+
+                </LinearLayout>
+
+
+                <ProgressBar
+                    android:layout_marginTop="75dp"
+                    android:id="@+id/progressBarBalance"
+                    style="?android:progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+
+                <ProgressBar
+                    android:layout_marginTop="250dp"
+                    android:id="@+id/progressBarCryptocurrencies"
+                    style="?android:progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

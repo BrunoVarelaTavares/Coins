@@ -8,12 +8,12 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 class RetrofitCoingeckoClient(private val userAgentInterceptor: UserAgentInterceptor,
-                              private val authenticationInterceptorMarketData: AuthenticationInterceptorMarketData,
+                              private val authenticationInterceptor: AuthenticationInterceptor,
                               private val httpLoggingInterceptor: HttpLoggingInterceptor) {
 
     private fun instance() = OkHttpClient.Builder()
         .addNetworkInterceptor(StethoInterceptor())
-        .addInterceptor(authenticationInterceptorMarketData)
+        .addInterceptor(authenticationInterceptor)
         .addInterceptor(userAgentInterceptor)
         .addInterceptor(httpLoggingInterceptor)
         .build()

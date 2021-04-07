@@ -14,7 +14,7 @@ internal class GetMarketDataUseCase(private val homeRepository: HomeRepository) 
 
     suspend fun execute(
         currency: String?,
-        ids: String? = ""
+        ids: String?
     ): Result = try {
         homeRepository.getMarketDataAsync(
             currency,

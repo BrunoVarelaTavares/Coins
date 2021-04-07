@@ -16,15 +16,19 @@ internal const val MODULE_NAME = "App"
 
 val appModule = Kodein.Module("${MODULE_NAME}Module") {
 
-    bind() from singleton { AuthenticationInterceptorMarketData() }
+    bind() from singleton { AuthenticationInterceptor() }
 
     bind() from singleton { AuthenticationInterceptorCryptoNews(BuildConfig.GRADLE_CRYPTOCONTROL_API_KEY) }
+
+    bind() from singleton { AuthenticationInterceptorCurrencyConverter(BuildConfig.GRADLE_CURRENCYCONVERTER_API_KEY) }
 
     bind() from singleton { UserAgentInterceptor() }
 
     bind() from singleton { RetrofitCoingeckoClient(instance(),instance(),instance()) }
 
     bind() from singleton { RetrofitCryptoNewsClient(instance(),instance(),instance()) }
+
+    bind() from singleton { RetrofitCurrencyConverterApiClient(instance(),instance(),instance()) }
 
     bind() from singleton {UserSharePreferences(instance())}
 
@@ -41,7 +45,7 @@ val appModule = Kodein.Module("${MODULE_NAME}Module") {
     bind<OkHttpClient>() with singleton {
         instance<OkHttpClient.Builder>()
             .addNetworkInterceptor(StethoInterceptor())
-            .addInterceptor(instance<AuthenticationInterceptorMarketData>())
+            .addInterceptor(instance<AuthenticationInterceptor>())
             .addInterceptor(instance<UserAgentInterceptor>())
             .addInterceptor(instance<HttpLoggingInterceptor>())
             .build()

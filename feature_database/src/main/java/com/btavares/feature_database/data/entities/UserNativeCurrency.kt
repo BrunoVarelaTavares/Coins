@@ -5,5 +5,5 @@ import androidx.room.Entity
 @Entity(primaryKeys = ["id", "currencyCode"])
 data class UserNativeCurrency(
     val id: Long,
-    val currencyCode: String
+    val currencyCode: String = "EUR"
 )

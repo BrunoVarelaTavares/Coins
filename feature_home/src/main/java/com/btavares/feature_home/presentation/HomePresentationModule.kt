@@ -21,7 +21,7 @@ import org.kodein.di.generic.singleton
 internal  val presentationModule = Kodein.Module("${MODULE_NAME}PresentationModule"){
 
     bind<HomeViewModel>() with scoped<Fragment>(AndroidLifecycleScope).singleton {
-        KotlinViewModelProvider.of(context){HomeViewModel(instance(),instance(),instance(),instance(),instance(),instance(),instance())}
+        KotlinViewModelProvider.of(context){HomeViewModel(instance(),instance(),instance(),instance(),instance(),instance(),instance(), instance())}
     }
 
     bind<RegistrationViewModel>() with scoped<Fragment>(AndroidLifecycleScope).singleton {

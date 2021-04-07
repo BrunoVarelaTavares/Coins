@@ -16,7 +16,7 @@ internal class GetCryptocurrencyMarketDataUseCase(private val coinDetailReposito
     ): Result = try {
         coinDetailRepository.getCryptocurrencyMarketData(
             currency
-        )?.let {
+        ).let {
             Result.Success(it)
         }
 

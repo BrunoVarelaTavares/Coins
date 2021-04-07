@@ -9,6 +9,7 @@ import com.btavares.feature_home.presentation.home.recyclerview.MarketDataFavori
 import com.btavares.feature_home.presentation.home.recyclerview.MarketDataTopMoversAdapter
 import com.btavares.feature_home.presentation.home.recyclerview.NewsAdapter
 import com.btavares.library_base.presentation.extension.observe
+import com.btavares.library_base.presentation.extension.round
 import com.btavares.library_base.presentation.extension.setOnDebouncedClickListener
 import com.btavares.library_base.presentation.fragment.InjectionFragment
 import com.pawegio.kandroid.visible
@@ -33,7 +34,8 @@ class HomeFragment : InjectionFragment(R.layout.fragment_home) {
         watchlistErrorLayout.visible = it.isWatchlistDataRequestError
         topMoversErrorLayout.visible = it.isTopMoversDataRequestError
         newsErrorLayout.visible = it.isNewsDataRequestError
-        homeCollapsingToolbar.title = "${it.currencySymbol}${it.portfolioBalance}"
+        homeCollapsingToolbar.title = "${it.currencySymbol}${
+            round(it.portfolioBalance)}"
         favoritesAdapter.cryptocurrencyMarketData = it.cryptocurrencyMarketData
         topMoversAdapter.topMoversData = it.cryptocurrencyMarketTopMovers
         newsAdapter.mNewsData = it.mNews

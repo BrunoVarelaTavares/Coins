@@ -27,6 +27,8 @@ android {
         buildConfigFieldFromGradleProperty("coingeckoBaseUrl")
         buildConfigFieldFromGradleProperty("cryptocontrolBaseUrl")
         buildConfigFieldFromGradleProperty("cryptocontrolApiKey")
+        buildConfigFieldFromGradleProperty("currencyconverterBaseUrl")
+        buildConfigFieldFromGradleProperty("currencyconverterApiKey")
 
 //
         buildConfigField("FEATURE_MODULE_NAMES", getDynamicFeatureModuleNames())

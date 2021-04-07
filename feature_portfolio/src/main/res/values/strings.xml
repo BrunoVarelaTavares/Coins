@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="portfolio_balance_label">Portfolio Balance</string>
+    <string name="iv_logo_description">iv_logo_description</string>
+    <string name="iv_back_arrow_description">iv_back_arrow_description</string>
+    <string name="portfolio_cryptocurrency_label">Portfolio Cryptocurrency</string>
+    <string name="save_label">Save</string>
+    <string name="currency_value_label">Currency value</string>
+</resources>

@@ -9,6 +9,11 @@ internal interface HomeRepository {
         ids: String?
     ): List<CryptocurrencyMarketDomainModel>
 
+    suspend fun getAllMarketDataAsync(
+        currency: String?
+
+    ): List<CryptocurrencyMarketDomainModel>
+
     suspend fun getCryptocurrenciesTopNewsAsync(
     ): List<NewsDomainModel>
 

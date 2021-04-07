@@ -28,14 +28,14 @@ internal class NewsAdapter: RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
         fun bind(newsDomainModel: NewsDomainModel){
             itemView.tvNewsTitle.text = newsDomainModel.title
             itemView.ivNewsImage.load(newsDomainModel.thumbnail)
-            itemView.tvNewsSourceName.text = newsDomainModel?.sourceDomainModel?.name
+            itemView.tvNewsSourceName.text = newsDomainModel.sourceDomainModel?.name
             itemView.tvNewsDate.text = getNewsDate(newsDomainModel.publishedAt)
-            itemView.tvFirstCoinName.text = newsDomainModel?.coins?.first()?.name
-            newsDomainModel?.coins?.let {
+            itemView.tvFirstCoinName.text = newsDomainModel.coins?.first()?.name
+            newsDomainModel.coins?.let {
               val isVisible =  setNewsItemLayoutVisibility(it)
                 if (isVisible){
                     itemView.linearLayoutCoin.visibility = View.VISIBLE
-                    itemView.tvSecondCoinName.text = it[1]?.name
+                    itemView.tvSecondCoinName.text = it[1].name
                 }
             }
 

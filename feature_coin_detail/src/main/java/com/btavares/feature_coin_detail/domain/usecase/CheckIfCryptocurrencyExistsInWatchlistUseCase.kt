@@ -15,7 +15,7 @@ internal class CheckIfCryptocurrencyExistsInWatchlistUseCase (private val coinDe
     ): Result = try {
         coinDetailRepository.checkCryptocurrencyExistsInWatchlist(
             cryptocurrencyId
-        )?.let {
+        ).let {
             Result.Success(it)
         }
     }catch (e: IOException){

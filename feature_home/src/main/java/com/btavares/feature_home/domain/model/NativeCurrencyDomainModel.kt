@@ -5,5 +5,5 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 internal data class NativeCurrencyDomainModel(
-    val currencyCode : String,
-    val currencySymbol: String) : Parcelable
+    val currencyCode : String = "EUR",
+    val currencySymbol: String= "€") : Parcelable

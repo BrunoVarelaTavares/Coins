@@ -13,6 +13,8 @@ internal  val domainModule = Kodein.Module("${MODULE_NAME}DomainModule"){
 
     bind() from singleton { GetMarketDataUseCase(instance()) }
 
+    bind() from singleton { GetAllMarketDataUseCase(instance()) }
+
     bind() from singleton { GetNewsUseCase(instance()) }
 
     bind() from singleton { GetLatestNewsUseCase(instance()) }

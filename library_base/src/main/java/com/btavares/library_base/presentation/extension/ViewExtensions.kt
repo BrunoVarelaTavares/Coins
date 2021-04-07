@@ -9,6 +9,9 @@ import android.graphics.Color
 import android.os.Build
 import android.os.SystemClock
 import android.view.View
+import java.math.BigDecimal
+import java.math.MathContext
+import java.math.RoundingMode
 import java.text.SimpleDateFormat
 import java.time.ZonedDateTime
 import java.util.*
@@ -115,7 +118,7 @@ fun getNewsDate(date : String?) : String{
         val zero: Long = 0
         val one: Long = 1
         val hours =  getHours(date)
-        when{
+        when {
             hours.equals(zero) -> "Now"
             hours.equals(one) -> "${hours} hour ago"
             hours <= 24     -> "${hours} hours ago"
@@ -184,6 +187,11 @@ fun getLastYearInDays() : String{
 
     return abs(daysBetween).toString()
 }
+
+fun round(number: Double?) = BigDecimal(number!!).setScale(2, RoundingMode.HALF_EVEN).toDouble()
+
+
+fun roundBigDecimal(number : String?) = BigDecimal(number).round(MathContext(5)).toString()
 
 
 

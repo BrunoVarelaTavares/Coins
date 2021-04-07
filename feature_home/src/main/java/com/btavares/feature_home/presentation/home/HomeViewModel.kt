@@ -21,6 +21,7 @@ import kotlin.math.abs
 internal class HomeViewModel (
     private val navManager: NavManager,
     private val getMarketDataUseCase: GetMarketDataUseCase,
+    private val getAllMarketDataUseCase: GetAllMarketDataUseCase,
     private val getNewsUseCase: GetNewsUseCase,
     private val getUserNativeCurrencyUseCase: GetUserNativeCurrencyUseCase,
     private val getUserPortfolioBalanceUseCase: GetUserPortfolioBalanceUseCase,
@@ -137,9 +138,8 @@ internal class HomeViewModel (
             }
 
             if (ifUserExists) {
-
                 val nativeCurrencyResult = async { getUserNativeCurrencyUseCase.execute() }
-                var nativeCurrency = NativeCurrencyDomainModel("EUR", "€")
+                var nativeCurrency = NativeCurrencyDomainModel()
                 nativeCurrencyResult.await().also {
                     when (it) {
                         is GetUserNativeCurrencyUseCase.Result.Success -> {
@@ -177,10 +177,10 @@ internal class HomeViewModel (
                 }
 
 
-                val getMarketDataDeferred = async { getMarketDataUseCase.execute(nativeCurrency.currencyCode)}
+                val getMarketDataDeferred = async { getAllMarketDataUseCase.execute(nativeCurrency.currencyCode)}
                 getMarketDataDeferred.await().also { result ->
                     val action = when (result) {
-                        is GetMarketDataUseCase.Result.Success ->
+                        is GetAllMarketDataUseCase.Result.Success ->
                             if (result.data.isEmpty()) {
                                 Action.MarketDataTopFiveFailure
                             } else {
@@ -197,7 +197,7 @@ internal class HomeViewModel (
                                 Action.MarketDataTopFiveSuccess(topCoinsMarketPercentage)
                             }
 
-                        is GetMarketDataUseCase.Result.Error -> Action.MarketDataTopFiveFailure
+                        is GetAllMarketDataUseCase.Result.Error -> Action.MarketDataTopFiveFailure
                     }
                     sendAction(action)
                 }
@@ -223,7 +223,7 @@ internal class HomeViewModel (
                 navigateToRegistrationFragment()
             }
 
-        }catch (e : Exception){
+        } catch (e : Exception){
 
         }
 

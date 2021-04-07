@@ -23,6 +23,9 @@ data class Cryptocurrency(
     val coinPercentage: String,
 
     @ColumnInfo(name = "coin_description")
-    val coinDescription: String
+    val coinDescription: String,
+
+    @ColumnInfo(name = "coin_price")
+    val coinPrice: Double?
 
 )

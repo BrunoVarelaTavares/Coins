@@ -19,7 +19,8 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/iv_coin_logo_description"/>
 
         <TextView
             android:id="@+id/tvCoinName"
@@ -39,8 +40,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="32dp"
-            android:text="BTC"
-            android:textSize="10dp"
+            android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/ivCoinLogo"
             app:layout_constraintTop_toBottomOf="@+id/tvCoinName" />
 
@@ -53,7 +53,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="5dp"
-
+            android:contentDescription="@string/iv_chart_description"
             app:layout_constraintEnd_toStartOf="@+id/tvCurrentPrice"
             app:layout_constraintStart_toEndOf="@id/tvCoinName"
             app:layout_constraintTop_toTopOf="parent" />
@@ -64,7 +64,6 @@
             android:layout_height="25dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
-            android:text="US$9,167.85"
             android:textAlignment="textEnd"
             android:textColor="@android:color/black"
             android:textSize="20sp"
@@ -79,8 +78,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="32dp"
             android:textColor="@android:color/holo_red_dark"
-            android:text="BTC"
-            android:textSize="10dp"
+            android:textSize="12sp"
             android:textAlignment="textEnd"
             android:layout_marginEnd="15dp"
             app:layout_constraintEnd_toEndOf="parent"

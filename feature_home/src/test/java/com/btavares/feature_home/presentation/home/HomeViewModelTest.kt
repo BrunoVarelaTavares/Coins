@@ -45,9 +45,13 @@ class HomeViewModelTest {
     internal lateinit var mockGetCryptocurrenciesWatchlistIds : GetCryptocurrenciesWatchlistIds
 
     @MockK
+    internal lateinit var mockGetAllMarketDataUseCase: GetAllMarketDataUseCase
+
+    @MockK
     internal lateinit var mockCheckIfUserExistsUseCase: CheckIfUserExistsUseCase
 
     private lateinit var viewModel: HomeViewModel
+
 
 
     @Before
@@ -57,6 +61,7 @@ class HomeViewModelTest {
         viewModel = HomeViewModel(
             mockNavManager,
             mockGetMarketDataUseCase,
+            mockGetAllMarketDataUseCase,
             mockGetNewsUseCase,
             mockGetUserNativeCurrencyUseCase,
             mockGetUserPortfolioBalanceUseCase,
@@ -119,7 +124,7 @@ class HomeViewModelTest {
 
         )
 
-        // when
+        // whenGetAllMarketDataUseCase
         viewModel.navigateToCoinMarketDetailFragment(coinId
             ,coinName, coinCurrentPrice,coinPercentage ,nativeCurrencySymbol)
 
@@ -158,6 +163,9 @@ class HomeViewModelTest {
         coEvery { mockGetMarketDataUseCase.execute(any(),any()) } returns
                 GetMarketDataUseCase.Result.Error(Exception())
 
+        coEvery { mockGetAllMarketDataUseCase.execute(any()) } returns
+                GetAllMarketDataUseCase.Result.Error(Exception())
+
 
         coEvery { mockGetNewsUseCase.execute() } returns
                 GetNewsUseCase.Result.Error(Exception())
@@ -182,6 +190,12 @@ class HomeViewModelTest {
             mNews= listOf()
 
         )
+
+
+
+
+
+
     }
 
 
@@ -210,6 +224,9 @@ class HomeViewModelTest {
 
         coEvery { mockGetNewsUseCase.execute() } returns
                 GetNewsUseCase.Result.Success(newsList)
+
+        coEvery { mockGetAllMarketDataUseCase.execute(any()) } returns
+                GetAllMarketDataUseCase.Result.Success(coinsList)
 
 
 
