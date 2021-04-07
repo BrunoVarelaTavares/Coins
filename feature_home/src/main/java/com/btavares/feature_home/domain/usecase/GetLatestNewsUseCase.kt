@@ -19,7 +19,7 @@ internal class GetLatestNewsUseCase(
         )?.let {
             Result.Success(it)
         }?: Result.Error(RuntimeException("No data"))
-    }catch (e: IOException){
+    }catch (e: Exception){
         Result.Error(e)
     }
 
